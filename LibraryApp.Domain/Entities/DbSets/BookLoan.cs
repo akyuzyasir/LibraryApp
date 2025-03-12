@@ -6,8 +6,8 @@ public class BookLoan : AuditableEntity
     public DateTime? ReturnDate { get; set; }
 
     // Nav props
-    public Guid BookId { get; set; }
-    public virtual Book? Book { get; set; }
+    public Guid BookCopyId { get; set; }
+    public virtual BookCopy BookCopy { get; set; } = null!;
     public Guid MemberId { get; set; }
     public virtual Member? Member { get; set; }
 }
