@@ -1,6 +1,6 @@
 ﻿namespace LibraryApp.Domain.Core.DataAccess.Interfaces;
 
-public interface IAsyncUpdateableRepository<TEntity> : IAsyncRepository where TEntity : BaseEntity
+public interface IAsyncUpdatableRepository<TEntity> : IAsyncRepository where TEntity : BaseEntity
 {
     Task<TEntity> UpdateAsync(TEntity entity);
 }

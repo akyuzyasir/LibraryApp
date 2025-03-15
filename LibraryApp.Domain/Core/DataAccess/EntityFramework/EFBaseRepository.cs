@@ -14,8 +14,8 @@ public abstract class EFBaseRepository<TEntity> : IAsyncOrderableRepository<TEnt
                                                  IAsyncFindableRepository<TEntity>,
                                                  IAsyncQueryableRepository<TEntity>,
                                                  IAsyncInsertableRepository<TEntity>,
-                                                 IAsyncUpdateableRepository<TEntity>,
-                                                 IAsyncDeleteableRepository<TEntity>,
+                                                 IAsyncUpdatableRepository<TEntity>,
+                                                 IAsyncDeletableRepository<TEntity>,
                                                  IAsyncRepository,
                                                  IAsyncTransactionRepository,
                                                  IRepository
