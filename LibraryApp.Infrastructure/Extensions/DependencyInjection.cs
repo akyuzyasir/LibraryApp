@@ -1,4 +1,6 @@
-﻿using LibraryApp.Infrastructure.Contexts;
+﻿using LibraryApp.DataAccess.Interfaces;
+using LibraryApp.Infrastructure.Contexts;
+using LibraryApp.Infrastructure.Repositories.Concretes;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,6 +21,14 @@ public static class DependencyInjection
                     null));
             options.UseLazyLoadingProxies();
         });
+
+        services.AddScoped<IAdminRepository, AdminRepository>();
+        services.AddScoped<IBookCategoryRepository, BookCategoryRepository>();
+        services.AddScoped<IBookCopyRepository, BookCopyRepository>();
+        services.AddScoped<IBookLoanRepository, BookLoanRepository>();
+        services.AddScoped<IBookRepository, BookRepository>();
+        services.AddScoped<IMemberRepository, MemberRepository>();
+
         return services;
     }
 }
